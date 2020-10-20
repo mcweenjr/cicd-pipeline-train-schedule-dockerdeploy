@@ -18,10 +18,7 @@ pipeline {
                 }
             }
         }
-        stage('Push Docker Image Testing') {
-            when {
-                branch 'master'
-            }
+        stage('Push Docker Image') {
             steps {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'docker_hub_login') {
