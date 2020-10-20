@@ -39,7 +39,7 @@ pipeline {
                         } catch (err) {
                             echo: 'caught error: $err'
                         }
-                        sh 'docker run --restart always --name train-schedule -p 8081:8080 -d mcweenjr/train-schedule:${env.BUILD_NUMBER}'
+                        sh 'docker run --restart always --name train-schedule -p 8081:8080 -d mcweenjr/train-schedule:latest'
                     }
                 }
             }
